@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      font-size: 1.25rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: auto 1fr 1fr;
+      gap: 1rem;
+    }
+
+    #execution-time-title {
+      align-self: center;
+    }
+
+    #compare {
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+  <h1>WebAssembly and JavaScript</h1>
+  <h2>Compare execution time by calculating Fibonacci</h2>
+  <label>
+    Fibonacci number: <input id="number">
+  </label>
+  <br />
+  <p id="result">Result:</p>
+  <button id="js-button">Calculate fibonacci using JavaScript</button>
+  <button id="wasm-button">Calculate fibonacci using WebAssembly</button>
+  <button id="reset-button">Reset</button>
+  <div class="container">
+    <div id="execution-time-title">Execution time</div>
+    <div>
+      <div>JavaScript </div>
+      <ol id="js-execution"></ol>
+    </div>
+    <div>
+      <div>WebAssembly</div>
+      <ol id="wasm-execution"></ol>
+    </div>
+
+    <div>Average execution time</div>
+    <div id="js-average"></div>
+    <div id="wasm-average"></div>
+
+    <div>Perfomance difference</div>
+    <div id="compare"></div>
+  </div>
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
+

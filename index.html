@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <style>
-    body {
+    * {
       font-size: 1.25rem;
+    }
+
+    button {
+      margin: 0.5rem 0;
     }
 
     .container {
@@ -30,7 +34,9 @@
   <br />
   <p id="result">Result:</p>
   <button id="js-button">Calculate fibonacci using JavaScript</button>
+  <br />
   <button id="wasm-button">Calculate fibonacci using WebAssembly</button>
+  <br />
   <button id="reset-button">Reset</button>
   <div class="container">
     <div id="execution-time-title">Execution time</div>
